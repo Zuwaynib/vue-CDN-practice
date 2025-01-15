@@ -1,0 +1,17 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+    <p>{{ name }}</p>
+    <p>{{ message }}</p>
+</div>
+
+<script>
+    Vue.createApp({
+        setup() {
+            return {
+                name: 'Queen',
+                message: 'All the Kings should put their Queens on the throne'
+            }
+        }
+    }).mount('#app')
+</script>
