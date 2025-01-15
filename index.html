@@ -3,15 +3,24 @@
 <div id="app">
     <p>{{ name }}</p>
     <p>{{ message }}</p>
+    <p>{{ count }}</p>
+    <button @click="increment">Increment</button>
 </div>
 
 <script>
     Vue.createApp({
-        setup() {
+        data() {
             return {
                 name: 'Queen',
-                message: 'All the Kings should put their Queens on the throne'
+                message: 'All the Kings should put their Queens on the throne',
+                count: 0
+            }
+        },
+        methods: {
+            increment() {
+                this.count++;
             }
         }
+        
     }).mount('#app')
 </script>
